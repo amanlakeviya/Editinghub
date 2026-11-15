@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="hi"><head><meta charset="utf-8">
+html lang="hi"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Social Studio – Instagram Post, Carousel &amp; Reel Maker</title>
 <style>
@@ -58,22 +57,4 @@ const T=[
 ['10-elegant-text-overlay.html','Elegant Text Overlay','Serif text photo ke upar, emoji buttons, fade. Photo ya video.',['quote','photo','video'],'#efe6d6,#b3261e','💀'],
 ['11-list-cover-follow-slides.html','List + Cover + Follow','Green glow dark slides: bullets list, "A vs B" cover aur Follow slide.',['carousel','quote'],'#000,#0b6b3a','🟢'],
 ['12-big-caps-bottom.html','Big Caps Bottom','Photo ke neeche bade colored CAPS (book/post recommendation). Photo ya video.',['photo','video'],'#222,#ffee00','📚'],
-['13-video-frame.html','Video Frame','Video ko rounded blue frame me, brand header aur caption ke saath.',['video'],'#1553d6,#fff','🎞️'],
-['14-video-stacked.html','Video Stacked','2-4 videos/photos stack, pill captions, record karke download.',['video','carousel'],'#6b3a1a,#ff1f6b','📽️'],
-['15-book-recommendation-card.html','Book Recommendation Card','Textured paper, marker headline, book photo, arrow aur green title.',['photo','quote','carousel'],'#d8cdb9,#a9d24c','📕'],
-['16-numbered-list-paper.html','Numbered List (Paper)','Yellow heading box, numbered points, red bold words. Post ya Story size.',['quote','carousel'],'#ebe3d1,#ffd22e','🔢']];
-const CH=[['all','Sab'],['quote','Quote'],['photo','Photo'],['carousel','Carousel'],['video','Video']];let cur='all';
-const ch=document.getElementById('ch'),g=document.getElementById('g'),q=document.getElementById('q'),br=document.getElementById('brand');
-CH.forEach(([k,n])=>{const b=document.createElement('button');b.textContent=n;b.onclick=()=>{cur=k;render()};b.dataset.k=k;ch.appendChild(b)});
-function render(){ch.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.k===cur));
- const s=q.value.toLowerCase().trim();g.innerHTML='';
- T.filter(t=>(cur==='all'||t[3].includes(cur))&&(!s||(t[1]+t[2]+t[3].join(' ')).toLowerCase().includes(s))).forEach(t=>{
-  const [a,b]=t[4].split(',');const el=document.createElement('a');el.className='c';el.href='#';el.onclick=ev=>{ev.preventDefault();openT(t[0],t[1])};
-  el.innerHTML=`<div class="t" style="background:linear-gradient(135deg,${a},${b})">${t[5]}<b>${t[0].slice(0,2)}</b></div><div class="i"><h3>${t[1]}</h3><p>${t[2]}</p><div class="tg">${t[3].map(x=>'<i>'+x+'</i>').join('')}</div></div>`;g.appendChild(el)});
- if(!g.children.length)g.innerHTML='<p class="s">Koi template nahi mila.</p>'}
-q.oninput=render;
-function title(){const n=br.value.trim();document.getElementById('ttl').innerHTML=n?`<span>${n.replace(/</g,'&lt;')}</span> Studio`:'<span>Social</span> Studio'}
-try{br.value=localStorage.getItem('ss_brand')||''}catch(e){}
-br.oninput=()=>{title();try{localStorage.setItem('ss_brand',br.value)}catch(e){}};
-title();render();
-</script></body></html>
+['13-video-frame.htm
